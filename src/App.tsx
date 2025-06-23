@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import videoImg from './assets/bb.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="hero">
+        <div className="hero-text">
+          <h1>Procesador de Videos</h1>
+          <p>Sube un video para generar un resumen automático</p>
+          <label htmlFor="video-upload" className="upload-button">
+            Subir video
+          </label>
+          <input type="file" id="video-upload" accept="video/*" hidden />
+        </div>
+        <div className="hero-image">
+          <img src={videoImg} alt="Ilustración de video" className="floating-image" />
+        </div>
+      </div>
     </div>
   );
 }
